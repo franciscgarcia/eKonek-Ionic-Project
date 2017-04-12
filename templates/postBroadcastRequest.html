@@ -1,0 +1,63 @@
+<ion-view title="Post Broadcast Request" id="page10" style="">
+  <ion-content padding="true" class="has-header">
+    <form id="broadcastRequest-form14" class="list" name="postBroadcastRequestForm">
+        <label class="item item-select" id="postBroadcastRequest-baranggay">
+            <span class="input-label">Baranggay</span>
+            <select ng-model="data.baranggay" required>
+                <option>Almanza Uno</option>
+                <option>Almanza Dos</option>
+                <option>B.F. International Village</option>
+                <option>Ilaya</option>
+                <option>Manuyo Uno</option>
+                <option>Manuyo Dos</option>
+                <option>Pamplona Uno</option>
+                <option>Pamplona Dos</option>
+                <option>Pamplona Tres</option>
+                <option>Pilar</option>
+                <option>Pulang-lupa Uno</option>
+                <option>Pulang-lupa Dos</option>
+                <option>Talon Uno</option>
+                <option>Talon Dos</option>
+                <option>Talon Tres</option>
+                <option>Talon Quatro</option>
+                <option>Talon Singko</option>
+            </select>
+        </label>
+
+        <label class="item item-input item-stacked-label" id="broadcastRequest-data.address">
+            <span class="input-label">Location</span>
+            <input placeholder="Address" type="text" ng-model="data.address" maxlength="25">
+        </label>
+
+      <label class="item item-select" id="broadcastRequest-data.service">
+        <span class="input-label">Select Service</span>
+        <select ng-model="placeHolder.service_name" ng-options="service.name for service in services" ng-change="formatService()" required>          
+        </select>
+      </label> 
+
+      <label class="item item-input" id="broadcastRequest-data.date">
+        <span class="input-label">Date</span>
+        <input placeholder="" type="date" ng-model="placeHolder.booking_date" ng-change="formatDate()" 
+               required min={{tomorrow}} name="date">
+      </label>
+        <span style="color:red" ng-show="postBroadcastRequestForm.date.$error.min">Invalid Date</span>
+
+      <label class="item item-input" id="broadcastRequest-data.time">
+        <span class="input-label">Time</span>
+        <input placeholder="" type="time" ng-model="placeHolder.booking_time" ng-change="formatTime()" 
+               required min="08:00" max="17:00" name="time">
+      </label>
+        <span style="color:red" ng-show="postBroadcastRequestForm.time.$error.min || postBroadcastRequestForm.time.$error.max">
+            Please pick a time between 8 A.M. and 5 P.M.
+        </span>
+
+      <label class="item item-input" id="broadcastRequest-data.jobtype">
+        <span class="input-label">Job Details</span>
+        <input placeholder="" type="text" ng-model="data.details" maxlength="12" required>
+      </label>
+
+      <button id="broadcastRequest-button12" style="border-radius:99px 99px 99px 99px;" class="button button-calm  button-block" type="submit" 
+              ng-disabled="postBroadcastRequestForm.$invalid || !loading" ng-click="submitBroadcastRequest()">Broadcast</button>
+    </form>
+  </ion-content>
+</ion-view>

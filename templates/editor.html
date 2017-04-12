@@ -1,0 +1,22 @@
+<ion-view title="Edit Profile" id="page11" style="" cache-view="false">
+  <ion-content padding="true" class="has-header">
+    <div class="item item-body" id="editor-list-item-container9" style="">
+      <form id="editor-form12" class="list">
+        <label class="item item-input" id="editor-data.username">
+          <span class="input-label"><b>New Username</b></span>
+          <input placeholder="name" ng-model="data.username" type="text" maxlength="8" required ng-trim="false">
+        </label>
+        <label class="item item-input" id="editor-data.password">
+            <span class="input-label"><b>New Password</b></span>
+            <input placeholder="password" ng-model="data.password" type="text" maxlength="15" required ng-trim="false">
+        </label>
+        <label class="item item-input" id="editor-data.phonenumber">
+            <span class="input-label"><b>New Phone Number</b></span>
+            <input placeholder="phone number" ng-model="data.phone_no" type="tel" maxlength="11" required>
+        </label>             
+        <button id="editor-button7" style="border-radius:999px 999px 999px 999px;" class="button button-balanced  button-block button-outline" 
+                ng-disabled="!data.username || !data.password || !data.phone_no" ng-click="update()">Save</button>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

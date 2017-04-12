@@ -1,0 +1,34 @@
+<ion-view title="Booking Request Details" id="page13" style="">
+  <ion-content padding="true" class="has-header">
+    <ion-list id="bookingRequestDetails-list14">
+      <ion-item id="bookingRequestDetails-list-item63" style="">
+        <h2>Worker Name: {{workerDetails.first_name}} {{workerDetails.last_name}}</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list id="bookingRequestDetails-list15">
+      <ion-item id="bookingRequestDetails-list-bookingAddress" style="">
+        Booking Address: {{$stateParams.booking_address}}</ion-item>
+
+      <ion-item id="bookingRequestDetails-list-bookingDate" style="">
+        Booking Date: {{$stateParams.booking_date | date:"MMM/dd/yyyy"}}</ion-item>
+
+      <ion-item id="bookingRequestDetails-list-bookingTime" style="">
+        Booking Time: {{booking_time | date:"h:mm a"}}</ion-item>
+
+      <ion-item id="bookingRequestDetails-list-bookingDetails" style="">
+        Booking Details: {{$stateParams.details}}</ion-item>
+    </ion-list>
+
+      <div id="JobCompleted_Btn" class="button-bar">
+          <button id="bookingRequestDetails-completedButton" class="button button-balanced  button-block"
+                  ng-click="finish()">
+              Completed
+          </button>
+
+          <button id="bookingRequestDetails-cancelButton" class="button button-assertive  button-block"
+                  ng-click="cancel()">
+              Cancel
+          </button>
+      </div>
+  </ion-content>
+</ion-view>

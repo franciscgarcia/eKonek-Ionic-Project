@@ -1,0 +1,17 @@
+<ion-view title="Workers List" id="page7" style="">
+  <ion-content padding="true" class="has-header">
+      <ion-refresher pulling-text="Pull to refresh..."
+                     on-refresh="doRefresh()">
+      </ion-refresher>
+        <ion-list id="workersList-list7">
+            <ion-item id="workersList-list-item21" 
+                      ui-sref="menu.workerProfile({wfn: worker.first_name, wln: worker.last_name, 
+                      workerID: worker.id})" style="" ng-repeat="worker in workers">
+                <div class="tester">
+                    <span><b>Worker Name:</b> {{ worker.first_name }} {{ worker.last_name }}</span>                     
+                </div>
+            </ion-item>
+            <span style="color:red" ng-show="!workers.length"><b>No Workers Found</b></span>
+        </ion-list>
+  </ion-content>
+</ion-view>

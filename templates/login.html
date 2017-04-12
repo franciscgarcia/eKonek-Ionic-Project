@@ -1,0 +1,21 @@
+<ion-view title="Login" id="page6" style="" cache-view="false">
+  <ion-content padding="true" class="has-header">
+    <form id="login-form2" class="list" name="loginForm">
+      <ion-list id="login-list4">
+        <label class="item item-input" id="login-input1">
+          <span class="input-label">Username</span>
+          <input placeholder="" type="text" ng-model="data.username"  })>
+        </label>
+        <label class="item item-input" id="login-input2">
+          <span class="input-label">Password</span>
+          <input placeholder="" type="password" ng-model="data.password">
+        </label>
+      </ion-list>  
+      <div class="spacer" style="height: 40px;"></div>
+      <button id="login-button1" class="button button-stable  button-block" ng-disabled="!data.username || !data.password || !loading" ng-click="login()">Log in</button>
+      <a ui-sref="signup" id="login-button2" class="button button-positive  button-block button-clear">Or create an account</a>
+      <a ui-sref="forgotpassword" id="login-forgotpassword" class="button button-positive  button-block button-clear">Forgot Password?</a>
+        
+    </form>      
+  </ion-content>
+</ion-view>

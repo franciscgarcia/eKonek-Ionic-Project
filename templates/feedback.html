@@ -1,0 +1,16 @@
+<ion-view title="Feedback" id="page14" style="">
+  <ion-content padding="true" class="has-header">
+    <div class="list card" id="feedback-card21">
+      <ion-item id="feedback-list-item79" style="">
+        <h2>Customer Name: {{customer_info.first_name}} {{customer_info.last_name}}</h2>
+      </ion-item>
+      <div class="item item-body" id="feedback-list-item-container15" style="">
+        <div id="feedback-markdown13" style="text-align:justify;" class="show-list-numbers-and-dots">
+            <p>Customer Rating: <ionic-ratings ratingsobj='ratingsObject' index='0'>
+                </ionic-ratings></p>
+          <p style="margin-top:0px;color:#000000;">Feedback: {{feedback_details}}</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

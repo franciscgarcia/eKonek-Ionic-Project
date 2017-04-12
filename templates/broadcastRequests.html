@@ -1,0 +1,16 @@
+<ion-view title="Broadcast Requests" id="page2" style="">
+  <ion-content padding="true" class="has-header">
+      <ion-refresher pulling-text="Pull to refresh..."
+                     on-refresh="doRefresh()">
+      </ion-refresher>
+          <ion-list id="notifications-list12">
+            <ion-item id="notifications-list-item49" 
+                      ui-sref="menu.broadcastRequestsDetails({book_id: '{{broadcastrequest.id}}'})" 
+                      style="" ng-repeat="broadcastrequest in broadcastrequests">
+                <h2>Booking Details: {{broadcastrequest.details}}</h2> 
+          
+            </ion-item>
+              <span style="color:red" ng-show="!broadcastrequest.length"><b>No Bookings Yet</b></span>        
+          </ion-list>
+  </ion-content>
+</ion-view>

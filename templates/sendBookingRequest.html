@@ -1,0 +1,60 @@
+<ion-view title="Send Booking Request" id="page12" style="" cache-view="false">
+  <ion-content padding="true" class="has-header">
+    <div class="item item-body" id="sendBookingRequest-list-item-container10" style="">
+      <form id="sendBookingRequest-form10" class="list" name="sendBookingForm">
+          <label class="item item-select" id="sendBookingRequest-baranggay">
+              <span class="input-label">Baranggay</span>
+              <select ng-model="data.baranggay" required>
+                  <option>Almanza Uno</option>
+                  <option>Almanza Dos</option>
+                  <option>B.F. International Village</option>
+                  <option>Ilaya</option>
+                  <option>Manuyo Uno</option>
+                  <option>Manuyo Dos</option>
+                  <option>Pamplona Uno</option>
+                  <option>Pamplona Dos</option>
+                  <option>Pamplona Tres</option>
+                  <option>Pilar</option>
+                  <option>Pulang-lupa Uno</option>
+                  <option>Pulang-lupa Dos</option>
+                  <option>Talon Uno</option>
+                  <option>Talon Dos</option>
+                  <option>Talon Tres</option>
+                  <option>Talon Quatro</option>
+                  <option>Talon Singko</option>
+              </select>
+          </label>
+
+          <label class="item item-input item-stacked-label" id="sendBookingRequest-data.address">
+              <span class="input-label">Location</span>
+              <input placeholder="Address" type="text" ng-model="data.address" maxlength="25" name="address" 
+                     required>
+          </label>
+
+        <label class="item item-input" id="sendBookingRequest-data.date">
+          <span class="input-label">Preferred Date</span>
+          <input placeholder="" type="date" ng-model="placeHolder.date" ng-change="formatDate()" name="date" 
+                 required min={{tomorrow}}>
+        </label>
+          <span style="color:red" ng-show="sendBookingForm.date.$error.min">Invalid Date</span>
+
+        <label class="item item-input" id="sendBookingRequest-data.time">
+          <span class="input-label">Preferred Time</span>
+          <input placeholder="" type="time" ng-model="placeHolder.time" ng-change="formatTime()" name="time" 
+                 required
+                 min="08:00" max="17:00">
+        </label>
+          <span style="color:red" ng-show="sendBookingForm.time.$error.min || sendBookingForm.time.$error.max">Please pick a time between 8 A.M. and 5 P.M.</span>
+
+        <label class="item item-input" id="sendBookingRequest-data.jobtype">
+            <span class="input-label">Job Details</span>
+            <input placeholder="" type="text" ng-model="data.details" maxlength="12" name="details" required>
+        </label>
+
+        <button id="sendBookingRequest-button11" style="border-radius:99px 99px 99px 99px;" 
+                class="button button-calm  button-block" ng-disabled="sendBookingForm.$invalid || !loading" ng-click="submitBookingRequest()">
+          Send Request</button>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view title="Applicants" id="page13" style="">
+  <ion-content padding="true" class="has-header">
+          <div>
+          <ion-list id="broadcastApplications">
+              <ion-item id="broadcastApplicationList" ui-sref="worker application" style="" 
+                        ng-repeat="applicant in applicants">
+                  <h2><p>Applicant #:</p> {{applicant.worker}}</h2>
+              </ion-item>
+          </ion-list>
+      </div>
+  </ion-content>
+</ion-view>

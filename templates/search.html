@@ -1,0 +1,17 @@
+<ion-view title="Search" id="page5" style="" cache-view="false">
+  <ion-content padding="true" class="has-header">
+      <ion-refresher pulling-text="Pull to refresh..."
+                     on-refresh="doRefresh()">
+      </ion-refresher>
+        <p style="margin-top:0px;color:#000000;">List of Services</p>
+                
+        <ion-list id="search-list2">
+            <ion-item ng-repeat="s in servicesList" id="search-list-item36" 
+                      ui-sref="menu.workersList({jobID: '{{s.id}}' })" style="">
+                {{s.name}}    
+            </ion-item>
+        </ion-list>
+        <a ui-sref="menu.postBroadcastRequest" id="search-button5" style="border-radius:99px 99px 99px 99px;" 
+           class="button button-calm  button-block">Broadcast Request</a>
+   </ion-content>
+</ion-view>

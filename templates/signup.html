@@ -1,0 +1,85 @@
+<ion-view title="Signup" id="page8" style="" hide-back-button="false">
+  <ion-content padding="true" class="has-header">
+    <form id="signup-form3" class="list" name="signupForm">
+      <ion-list id="signup-list8">
+        <label class="item item-input" id="signup-input3" >
+          <span class="input-label">First Name</span>
+          <input placeholder="Letters only please" type="text" ng-model="data.first_name" maxlength="15" 
+                 ng-pattern="lettersOnlyRegex" ng-trim="false" name="first_name" required >                      
+        </label>
+          <span style="color:red" ng-show="signupForm.first_name.$error.pattern">Letters Only Please</span>
+          <span style="color:red" ng-show="signupForm.first_name.$touched && signupForm.first_name.$error.required">
+          Required Field</span>
+
+        <label class="item item-input" id="signup-input6">
+            <span class="input-label">Last Name</span>
+            <input placeholder="Letters only please" type="text" ng-model="data.last_name" name="last_name" maxlength="15" 
+                   ng-pattern="lettersOnlyRegex" ng-trim="false" required>
+        </label>
+          <span style="color:red" ng-show="signupForm.last_name.$error.pattern">Letters Only Please</span>
+          <span style="color:red" ng-show="signupForm.last_name.$touched && signupForm.last_name.$error.required">
+          Required Field</span>
+
+        <label class="item item-input" id="signup-input7">
+            <span class="input-label">Email</span>
+            <input placeholder="" type="email" ng-model="data.email" name="email" maxlength="50" required>
+        </label>
+          <span style="color:red" ng-show="signupForm.email.$touched && signupForm.email.$error.required">
+              Required Field</span>
+          <span style="color:red" ng-show="signupForm.email.$error.email">
+              Valid Email please
+          </span>
+
+        <label class="item item-input" id="signup-input4">
+          <span class="input-label">Username</span>
+          <input placeholder="Maximum 8 characters" type="text" ng-model="data.username" maxlength="8" required>
+        </label>
+        <label class="item item-input" id="signup-input5">
+          <span class="input-label">Password</span>
+          <input placeholder="" type="password" ng-model="data.password" maxlength="15" required>
+        </label>
+
+          <label class="item item-select" id="signup-baranggay">
+              <span class="input-label">Baranggay</span>
+              <select ng-model="data.barangay" required>
+                  <option>Almanza Uno</option>
+                  <option>Almanza Dos</option>
+                  <option>B.F. International Village</option>
+                  <option>Ilaya</option>
+                  <option>Manuyo Uno</option>
+                  <option>Manuyo Dos</option>
+                  <option>Pamplona Uno</option>
+                  <option>Pamplona Dos</option>
+                  <option>Pamplona Tres</option>
+                  <option>Pilar</option>
+                  <option>Pulang-lupa Uno</option>
+                  <option>Pulang-lupa Dos</option>
+                  <option>Talon Uno</option>
+                  <option>Talon Dos</option>
+                  <option>Talon Tres</option>
+                  <option>Talon Quatro</option>
+                  <option>Talon Singko</option>
+              </select>
+          </label>
+
+        <label class="item item-input" id="signup-address">
+            <span class="input-label">Address Line 2</span>
+            <input placeholder="" type="text" ng-model="data.address" maxlength="20" required>
+        </label>
+
+        <label class="item item-input" id="signup-phoneNumber">
+            <span class="input-label">Phone Number</span>
+            <input placeholder="Numbers only please" type="text" ng-model="data.phone_no" name="phone" 
+                   maxlength="11" minlength="7" ng-pattern="numOnlyRegex" ng-trim="false" required>
+        </label>
+          <span style="color:red" ng-show="signupForm.phone.$error.pattern">Numbers Only Please</span><br />
+          <span style="color:red" ng-show="signupForm.phone.$touched && signupForm.phone.$error.minlength">
+          Please enter valid phone number</span>
+      </ion-list>
+      <button id="signup-button3" class="button button-positive button-block" 
+              ng-disabled="signupForm.$invalid || !loading" ng-click="signup()">Sign up</button>
+        
+        
+    </form>
+  </ion-content>
+</ion-view>

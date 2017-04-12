@@ -1,0 +1,19 @@
+<ion-view title="Booking Requests" id="bookingRequests" style="">
+  <ion-content padding="true" class="has-header">
+      <ion-refresher pulling-text="Pull to refresh..."
+                     on-refresh="doRefresh()">
+      </ion-refresher>
+          <ion-list id="notifications-list12">
+            <ion-item id="notifications-list-item49" 
+                      ui-sref="menu.bookingRequestDetails({worker_ID: bReq.worker, 
+                      booking_date: bReq.booking_date, booking_time: bReq.booking_time, 
+                      details: bReq.details, booking_address: bReq.address, booking_ID: bReq.id})" 
+                      style="" ng-repeat="bReq in bReqs">
+                <h2>Booking Details: {{bReq.details}}</h2>               
+                  
+            <ion-option-button class="button-positive">Delete</ion-option-button>        
+            </ion-item>
+            <span style="color:red" ng-show="!bReqs.length"><b>No Bookings Yet</b></span>        
+          </ion-list>
+  </ion-content>
+</ion-view>

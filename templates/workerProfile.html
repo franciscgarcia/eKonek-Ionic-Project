@@ -1,0 +1,29 @@
+<ion-view title="Worker Profile" id="page9" style="">
+  <ion-content padding="true" class="has-header">
+      <div class="spacer" style="width: 283px; height: 24px;"></div>
+    <ion-list id="workerProfile-list10">
+        <ion-item id="workerProfile-list-item24" style="">
+            <h2><b>Worker Name:</b> {{$stateParams.wfn}} {{$stateParams.wln}}</h2>
+            
+        </ion-item>
+    </ion-list>
+    <div class="spacer" style="width: 283px; height: 24px;"></div>
+    <div class="item item-body" id="workerProfile-list-item-container4" style="">
+      <div id="workerProfile-markdown8" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">Customer Feedback</p>
+      </div>
+      <ion-list id="workerProfile-list11" >
+        <ion-item id="workerProfile-list-item25" style="" ui-sref="menu.feedback({worker_id: worker_info.id, 
+                  cust_id: '{{feedback.customer}}', feedback_star: feedback.star, feedback_details: feedback.details})" 
+                  ng-repeat="feedback in feedbacks">
+            <div class="tester">                
+                <span>Feedback {{feedbacks.indexOf(feedback) + 1}}</span>
+            </div>
+        </ion-item>        
+      </ion-list>
+    </div>
+      
+    <div class="spacer" style="width: 283px; height: 24px;"></div>
+    <a ui-sref="menu.sendBookingRequest({wfn: $stateParams.wfn, wln: $stateParams.wln, workerID: $stateParams.workerID})" id="workerProfile-button10" style="border-radius:99px 99px 99px 99px;" class="button button-calm  button-block">Send Booking Request</a>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view title="My Profile" id="page1" style="" cache-view="false">
+  <ion-content padding="true" class="has-header">
+    <form id="editProfile-form4" class="list">        
+        
+        <ion-item>
+            <ion-label><b>Name:</b> {{customerDetails.first_name}} {{customerDetails.last_name}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label><b>Username:</b> {{customerDetails.username}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label><b>Email:</b> {{customerDetails.email}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label><b>Phone Number:</b> {{customerDetails.phone_no}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label><b>Baranggay:</b> {{customerDetails.barangay}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label><b>Address:</b> {{customerDetails.address}}</ion-label>
+        </ion-item>
+        </form>          
+        <button ui-sref="menu.editor" id="edit-button" class="button button-block button-positive">Edit</button>          
+  </ion-content>
+</ion-view>
