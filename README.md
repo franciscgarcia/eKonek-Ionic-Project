@@ -1,2 +1,5 @@
 # eKonek-Ionic-Project
-our thesis project
+
+this is a sample booking Ionic application for our thesis project.
+
+
